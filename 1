@@ -1,0 +1,29 @@
+/******************************************************************************
+
+1) Permitir que el usuario ingrese una palabra de hasta 20 letras.
+   Mostrar en pantalla cuántas letras tiene la palabra ingresada.
+   Por ejemplo "CASA" debe indicar 4 letras.
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+
+{
+    char palabras[20];
+    int i; 
+    int j=0;
+    int a=0;
+    int z =0;
+    printf("Ingrese una palabra:"); //se pide el ingreso de una palabra
+    scanf("%s", &palabras);
+    
+    
+    for(i=0; i<=20; i++ ){ //se cuenta la cantidad de variables en el vector que nos son un espacio para poder contar las letras     
+        if(j==0){
+        if(palabras[i] == '\0'){ 
+            j++;
+        }else{a++;}
+    }
+    }
+        printf("La palabra tiene %d letras", a);}
