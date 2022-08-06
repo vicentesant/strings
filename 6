@@ -179,15 +179,24 @@ int main()
             a = i;
         }
         
-         
+ 
        
          
     }
     }
     
+    for(i=0; i<=26; i++)
+	{
+        if(letras[i] == mayor && letras[i]!= 0)
+        {
+            z =z+1;
+        }
+	}
   
+     if(z>=2){
+        printf( "Hay letras que se repiten la misma cantidad de veces");}else
     
-    if(z==0){
+    {
     printf( "La letra que mas se repite es la %c con %d ocurrencias ",magicogonzales[a],letras[a] );}
         
         
