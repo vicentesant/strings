@@ -1,0 +1,47 @@
+/* 8) El usuario ingresará nombres de personas hasta que ingrese la palabra "FIN". No sabemos cuántos nombres ingresará.
+Luego de finalizar el ingreso, mostrar en pantalla cuál es el primer nombre en orden alfabético de todos los ingresados. */
+
+#include <stdio.h>
+#include <string.h>
+ 
+int main() {
+    
+  char nombres[15]; 
+  char j[15];
+  char mensaje[15]={'F', 'I', 'N', 'A', 'L', 'I', 'Z', 'A', 'D', 'O'}; //Se declara un mensaje para mostrar en el caso de que se finalize el ingreso sin haber 
+  int a=0;                                                          
+                                                             
+  printf("Ingrese FIN para detener el ingreso.\n\n");
+ 
+  do {                            //El proceso termina cuando se ingresa la palabra fin
+    printf("Ingrese un nombre: ");  
+    scanf("%s",nombres);
+    
+    
+    if(a == 0)
+    { 
+		if(strcmp(nombres,"FIN") == 0)  //si se ingresa primero la palabra fin se envia el mensaje predertemninado
+
+		{
+		    strcpy(j, mensaje); 
+		}
+		else
+		{
+		 	strcpy(j, nombres); 
+	    }
+ 	}
+ 	
+	else{
+	    if(strcmp(nombres, j) < 0 && strcmp(nombres,"FIN") != 0 ) 
+        {
+            strcpy(j, nombres); //El ultimo nombre ingresado ocupa el lugar del que estaba guardado en primero.
+        }
+    }
+
+    a=1; 
+    
+  } while (strcmp(nombres,"FIN") != 0); //se revisa si la palabra ingresada es fin para terminar el proceso 
+    
+    printf("%s", j);
+	return 0;
+}
