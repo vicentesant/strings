@@ -1,0 +1,22 @@
+/**************************
+
+2) Permitir el ingreso de una palabra y mostrarla en pantalla al revés.
+Por ejemplo, para "CASA" se debe mostrar "ASAC".
+***************************/
+
+#include<stdio.h>
+int main ()
+{
+char c, palabra [21];
+int i;
+printf ("Teclea una palabra de menos de 20 letras:\n");//se pide el ingreso de una palabra
+scanf ("%s", palabra);
+i=0;
+while (palabra[i++]!= '\0');//se cuenta la cantidad de letras que tiene la palabra 
+printf("%s tiene %d letras.\n", palabra, i-1);
+printf("%s escrita al revés es:", palabra);
+while (i>0)//se da vuelta la palabra
+printf("%c", palabra[--i]);
+printf("\n");
+return 0;
+}
