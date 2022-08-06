@@ -1,0 +1,25 @@
+/******************************************************************************
+4) El usuario ingresa una palabra. Mostrar en pantalla cuántas letras A minúsculas contiene.
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+
+{
+    char palabras[20];
+    int i; 
+    int j=0;
+    int a=0;
+    int z =0;
+    printf("Ingrese una palabra:");//se pide el ingreso de una palabra
+    scanf("%s", &palabras);
+    
+    
+    for(i=0; i<=20; i++ ){//se compara y se cuenta la cantidad de a minusculas
+        
+        if(palabras[i] == 'a'){ 
+            j++;
+        }else{a++;}
+    
+    }
+        printf("La palabra tiene %d a minusculas", j);}
